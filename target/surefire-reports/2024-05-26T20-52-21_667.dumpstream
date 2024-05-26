@@ -1,0 +1,4 @@
+# Created at 2024-05-26T20:52:23.481
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Software\workPage_Playwright\jenkins_project_last\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
