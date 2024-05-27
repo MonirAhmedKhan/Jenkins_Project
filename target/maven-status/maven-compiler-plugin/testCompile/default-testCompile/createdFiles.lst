@@ -2,7 +2,9 @@ pages\CustomerLoginPage.class
 runner\Runner.class
 stepDefinitions\Hooks.class
 stepDefinitions\Login_Functionality_Verification.class
+pages\CustomerHomePage.class
 stepDefinitions\Employee_LoginFunctionality.class
 pages\EmployeeLoginPage.class
 pages\LandingPage.class
+pages\EmployeeHomePage.class
 base\Base.class
