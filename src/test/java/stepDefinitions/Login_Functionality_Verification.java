@@ -59,10 +59,10 @@ public class Login_Functionality_Verification extends Base {
 		
 		employeeLoginPage.menuCustomerLogin();
 		
-//		String customerLoginTag = getText(CustomerHomePage.customerLogingTag);
-//		assertEquals("Customer Login", customerLoginTag);
-//		System.out.println("Customer Login Text: " + customerLoginTag);
-//		System.out.println("Run= Click Customer Login");
+		String customerLoginTag = getText(CustomerHomePage.customerLogingTag);
+		assertEquals("Customer Login", customerLoginTag);
+		System.out.println("Customer Login Text: " + customerLoginTag);
+		System.out.println("Run= Click Customer Login");
 	}
 
 	@Then("I enter User Id {string}")
