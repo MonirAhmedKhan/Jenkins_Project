@@ -1,5 +1,8 @@
+pages\CustomerLoginPage.class
 runner\Runner.class
 stepDefinitions\Hooks.class
 stepDefinitions\Login_Functionality_Verification.class
 stepDefinitions\Employee_LoginFunctionality.class
+pages\EmployeeLoginPage.class
+pages\LandingPage.class
 base\Base.class

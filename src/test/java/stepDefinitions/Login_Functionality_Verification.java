@@ -9,8 +9,14 @@ import base.Base;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.CustomerLoginPage;
+import pages.EmployeeLoginPage;
+import pages.LandingPage;
 
 public class Login_Functionality_Verification extends Base {
+	LandingPage landingpage = new LandingPage();
+	CustomerLoginPage customerLoginPage = new CustomerLoginPage();
+	EmployeeLoginPage employeeLoginPage = new EmployeeLoginPage();
 	private int screenshotCounter = 1;
 	private SoftAssert soft = new SoftAssert();
 
@@ -29,7 +35,8 @@ public class Login_Functionality_Verification extends Base {
 
 	@When("I Click on Login")
 	public void i_click_on_login() {
-		driver.findElement(By.xpath("//*[@id='navli']/li[4]/a")).click();
+		//driver.findElement(By.xpath("//*[@id='navli']/li[4]/a")).click();
+		landingpage.clickLogingMenu();
 	}
 
 	@Then("I will be in Login Page")
@@ -47,7 +54,10 @@ public class Login_Functionality_Verification extends Base {
 
 	@Then("Click Customer Login")
 	public void click_customer_login() {
-		click(By.xpath("//*[@id='navli']/li[2]/a"));
+		//click(By.xpath("//*[@id='navli']/li[2]/a"));
+		
+		employeeLoginPage.menuCustomerLogin();
+		
 		String customerLogin = getText(By.xpath("//div/h1"));
 		assertEquals("Customer Login", customerLogin);
 		System.out.println("Customer Login Text: " + customerLogin);
@@ -55,19 +65,20 @@ public class Login_Functionality_Verification extends Base {
 	}
 
 	@Then("I enter User Id {string}")
-	public void i_enter_user_id(String string) {
-		sendKeys(By.xpath("/html/body/div[2]/form/input[1]"), string);
-		System.out.println("enter user ID");
+	public void i_enter_user_id(String userId) {
+		customerLoginPage.customerUserId(userId);
+		System.out.println("User ID= "+ userId);
 	}
 
 	@Then("I enter Password {string}")
-	public void i_enter_password(String string) {
-		sendKeys(By.name("pwd"), string);
+	public void i_enter_password(String userpass) {
+		customerLoginPage.CustomerUserPass(userpass);
 	}
 
 	@When("I click Login Button")
 	public void i_click_login_button() {
-		click(By.xpath("//input[@name=\"login-submit\"]"));
+		customerLoginPage.CustomerLoginButton();
+		//click(By.xpath("//input[@name=\"login-submit\"]"));
 	}
 
 	@Then("I will see Customer Home Page")

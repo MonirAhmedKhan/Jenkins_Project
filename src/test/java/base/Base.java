@@ -25,8 +25,8 @@ public class Base {
     }
 
     public static String getText(By locator) {
-        String s = driver.findElement(locator).getText();
-        return s;
+        String text = driver.findElement(locator).getText();
+        return text;
     }
     public void tearDown(Scenario scenario) throws InterruptedException {
         //Thread.sleep(20000);
