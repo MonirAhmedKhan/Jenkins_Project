@@ -9,6 +9,7 @@ import base.Base;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.CustomerHomePage;
 import pages.CustomerLoginPage;
 import pages.EmployeeLoginPage;
 import pages.LandingPage;
@@ -58,9 +59,9 @@ public class Login_Functionality_Verification extends Base {
 		
 		employeeLoginPage.menuCustomerLogin();
 		
-		String customerLogin = getText(By.xpath("//div/h1"));
-		assertEquals("Customer Login", customerLogin);
-		System.out.println("Customer Login Text: " + customerLogin);
+		String customerLoginTag = getText(CustomerHomePage.customerLogingTag);
+		assertEquals("Customer Login", customerLoginTag);
+		System.out.println("Customer Login Text: " + customerLoginTag);
 		System.out.println("Run= Click Customer Login");
 	}
 
@@ -83,7 +84,7 @@ public class Login_Functionality_Verification extends Base {
 
 	@Then("I will see Customer Home Page")
 	public void i_will_see_customer_home_page() {
-		String s = getText(By.xpath("//*[@id='divimg']/div/h2[2]"));
+		String s = getText(CustomerHomePage.lebelWelcomeSMS);
 		assertEquals("Welcome David",s);
 		System.out.println(s);
 	}

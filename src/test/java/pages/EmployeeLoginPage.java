@@ -28,12 +28,5 @@ public class EmployeeLoginPage extends Base{
     public void empUserId(String userId) {
 		sendKeys(EmpUserId,userId);
 	}
-//    public void empUserPass(String pass) {
-//  		sendKeys(EmpUserId,pass);
-//  	}
-    
-//    public void employeeLoginButton() {
-//    	click(butnEmpLogin);
-//    }
-    
+
 }

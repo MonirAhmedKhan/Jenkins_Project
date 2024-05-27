@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 
 import base.Base;
 import io.cucumber.java.en.Then;
+import pages.EmployeeHomePage;
 import pages.EmployeeLoginPage;
 
 public class Employee_LoginFunctionality extends Base{
@@ -16,9 +17,9 @@ public class Employee_LoginFunctionality extends Base{
 		//click(By.xpath("//*[@id='navli']/li[3]/a"));
 		
 		employeeLoginPage.menuEmployeeLogin();
-		String EMPLogin = getText(By.xpath("/html/body/div[2]/h1"));
-		assertEquals("Employee Login", EMPLogin);
-		System.out.println("EMP Login Text: " + EMPLogin);
+		String EMPTag = getText(EmployeeHomePage.EMPLoginTag);
+		assertEquals("Employee Login", EMPTag);
+		System.out.println("EMP Login Text: " + EMPTag);
 	}
 
 	@Then("I enter User Id as {string}")
@@ -29,9 +30,9 @@ public class Employee_LoginFunctionality extends Base{
 
 	@Then("I will see Employee Home Page")
 	public void i_will_see_employee_home_page() {
-		String s = getText(By.xpath("//*[@id='divimg']/div/h2[2]"));
-		assertEquals("Welcome Test", s);
-		System.out.println(s);
+		String WelcomeTag = getText(EmployeeHomePage.lebelWelcometest);
+		assertEquals("Welcome Test", WelcomeTag);
+		System.out.println(WelcomeTag);
 	}
 
 }
