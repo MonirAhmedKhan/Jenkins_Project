@@ -17,7 +17,7 @@ import pages.LandingPage;
 public class Login_Functionality_Verification extends Base {
 	LandingPage landingpage = new LandingPage();
 	CustomerLoginPage customerLoginPage = new CustomerLoginPage();
-	EmployeeLoginPage employeeLoginPage = new EmployeeLoginPage(driver);
+	EmployeeLoginPage employeeLoginPage = new EmployeeLoginPage();//driver
 	
 	private int screenshotCounter = 1;
 	private SoftAssert soft = new SoftAssert();

@@ -10,14 +10,14 @@ import pages.EmployeeHomePage;
 import pages.EmployeeLoginPage;
 
 public class Employee_LoginFunctionality extends Base{
-	EmployeeLoginPage employeeLoginPage= new EmployeeLoginPage(driver);
+	EmployeeLoginPage employeeLoginPage= new EmployeeLoginPage();
 	
 	@Then("Click Employee Login")
 	public void click_employee_login() {
 		//click(By.xpath("//*[@id='navli']/li[3]/a"));
 		
 		employeeLoginPage.menuEmployeeLogin();
-		String EMPTag = getText(EmployeeHomePage.EMPLoginTag);
+		String EMPTag = getText(By.xpath("/html/body/div[2]/h1"));
 		assertEquals("Employee Login", EMPTag);
 		System.out.println("EMP Login Text: " + EMPTag);
 	}
@@ -30,7 +30,7 @@ public class Employee_LoginFunctionality extends Base{
 
 	@Then("I will see Employee Home Page")
 	public void i_will_see_employee_home_page() {
-		String WelcomeTag = getText(EmployeeHomePage.lebelWelcometest);
+		String WelcomeTag = getText(By.xpath("//h2[contains(text(),'Welcome')]"));
 		assertEquals("Welcome Test", WelcomeTag);
 		System.out.println(WelcomeTag);
 	}

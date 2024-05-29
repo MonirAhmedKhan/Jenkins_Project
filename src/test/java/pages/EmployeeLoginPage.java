@@ -16,9 +16,10 @@ public class EmployeeLoginPage extends Base{
     public static  By EmpUserPass = By.xpath("//input[@name='pwd']");
 
     public static  By butnEmpLogin = By.xpath("//input[@name='login-submit']");
-    public EmployeeLoginPage (WebDriver driver) {
-    this.driver = driver;
-    }
+    
+//    public EmployeeLoginPage (WebDriver driver) {
+//    this.driver = driver;
+//    }
     
     // Actions
     
