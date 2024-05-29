@@ -17,7 +17,8 @@ import pages.LandingPage;
 public class Login_Functionality_Verification extends Base {
 	LandingPage landingpage = new LandingPage();
 	CustomerLoginPage customerLoginPage = new CustomerLoginPage();
-	EmployeeLoginPage employeeLoginPage = new EmployeeLoginPage();
+	EmployeeLoginPage employeeLoginPage = new EmployeeLoginPage(driver);
+	
 	private int screenshotCounter = 1;
 	private SoftAssert soft = new SoftAssert();
 
@@ -59,7 +60,7 @@ public class Login_Functionality_Verification extends Base {
 		
 		employeeLoginPage.menuCustomerLogin();
 		
-		String customerLoginTag = getText(CustomerHomePage.customerLogingTag);
+		String customerLoginTag = getText( By.xpath("/html/body/div[2]/h1"));
 		assertEquals("Customer Login", customerLoginTag);
 		System.out.println("Customer Login Text: " + customerLoginTag);
 		System.out.println("Run= Click Customer Login");
@@ -84,7 +85,7 @@ public class Login_Functionality_Verification extends Base {
 
 	@Then("I will see Customer Home Page")
 	public void i_will_see_customer_home_page() {
-		String s = getText(CustomerHomePage.lebelWelcomeSMS);
+		String s = getText(By.xpath("//*[@id='divimg']/div/h2[2]"));
 		assertEquals("Welcome David",s);
 		System.out.println(s);
 	}

@@ -10,7 +10,7 @@ import pages.EmployeeHomePage;
 import pages.EmployeeLoginPage;
 
 public class Employee_LoginFunctionality extends Base{
-	EmployeeLoginPage employeeLoginPage= new EmployeeLoginPage();
+	EmployeeLoginPage employeeLoginPage= new EmployeeLoginPage(driver);
 	
 	@Then("Click Employee Login")
 	public void click_employee_login() {

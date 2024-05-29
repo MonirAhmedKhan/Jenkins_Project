@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import base.Base;
 
@@ -15,7 +16,9 @@ public class EmployeeLoginPage extends Base{
     public static  By EmpUserPass = By.xpath("//input[@name='pwd']");
 
     public static  By butnEmpLogin = By.xpath("//input[@name='login-submit']");
-    
+    public EmployeeLoginPage (WebDriver driver) {
+    this.driver = driver;
+    }
     
     // Actions
     
