@@ -9,7 +9,7 @@ import base.Base;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.CustomerHomePage;
+
 import pages.CustomerLoginPage;
 import pages.EmployeeLoginPage;
 import pages.LandingPage;
